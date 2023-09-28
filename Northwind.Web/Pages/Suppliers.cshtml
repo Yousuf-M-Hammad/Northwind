@@ -1,0 +1,40 @@
+﻿@page
+@using Northwind.Common.Models
+@model Northwind.Web.Pages.SuppliersModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<div class="row">
+    <h1 class="display-2">Suppliers</h1>
+    <table class="table">
+        <thead class="thead-inverse">
+            <tr><th>Company Name</th></tr>
+        </thead>
+        <tbody>
+            @if (Model.Suppliers is not null)
+            {
+                @foreach (Supplier supplier in Model.Suppliers)
+                {
+                    <tr><td>@supplier.ContactName (@supplier.ContactTitle) from @supplier.CompanyName</td></tr>
+                }
+            }
+        </tbody>
+    </table>
+    <br />
+    <div class="row">
+        <p>Enter details for a new supplier:</p>
+        <form method="POST">
+            <div>
+                <input asp-for="supplier.CompanyName"
+                       placeholder="Company Name" />
+            </div>
+            <div>
+                <input asp-for="supplier.Country"
+                       placeholder="Country" />
+            </div>
+            <div>
+                <input asp-for="supplier.Phone"
+                       placeholder="Phone" />
+            </div>
+            <input type="submit" />
+        </form>
+    </div>
+</div>

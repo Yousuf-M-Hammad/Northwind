@@ -6,13 +6,13 @@ using Northwind.Common.Models;
 
 namespace Northwind.Common.Context;
 
-public partial class Northwind : DbContext
+public partial class NorthwindDB : DbContext
 {
-    public Northwind()
+    public NorthwindDB()
     {
     }
 
-    public Northwind(DbContextOptions<Northwind> options)
+    public NorthwindDB(DbContextOptions<NorthwindDB> options)
         : base(options)
     {
     }

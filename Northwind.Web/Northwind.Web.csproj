@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -9,5 +9,8 @@
   <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
-
+  <ItemGroup>
+    <ProjectReference Include="..\Northwind.Common.Context\Northwind.Common.Context.csproj"/>
+    <ProjectReference Include="..\Northwind.Razor.Employees\Northwind.Razor.Employees.csproj" />
+  </ItemGroup>
 </Project>

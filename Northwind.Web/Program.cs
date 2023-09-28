@@ -1,13 +1,16 @@
+using Northwind.Common.Context;
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
+builder.Services.AddNorthwindContext();
 WebApplication app = builder.Build();
 
+
 // Https redirection
-if (app.Environment.IsDevelopment())
+if (!app.Environment.IsDevelopment())
 {
     app.UseHsts();
+    app.UseHttpsRedirection();
 }
-app.UseHttpsRedirection();
 
 // loading static files
 app.UseDefaultFiles();

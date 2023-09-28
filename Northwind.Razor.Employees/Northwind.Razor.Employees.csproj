@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+	  <ProjectReference Include="../Northwind.Common.Context/Northwind.Common.Context.csproj" />
+	  <ProjectReference Include="../Northwind.Common.Models/Northwind.Common.Models.csproj" />
+  </ItemGroup>
+
+
+
+</Project>
